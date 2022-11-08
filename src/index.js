@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Context as HamburgerProvider } from "./context/hamburger/Hamburger";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HamburgerProvider.Provider value={''}>
+      <App />
+    </HamburgerProvider.Provider>
   </React.StrictMode>
 );
 
